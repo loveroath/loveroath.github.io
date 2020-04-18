@@ -1,4 +1,4 @@
-function showTime() { 
+﻿function showTime() { 
 	var currentDate = new Date(); 
 	var startDate = new Date(2017, 05, 17);
 	var date3 = currentDate-startDate;
