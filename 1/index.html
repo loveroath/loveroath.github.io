@@ -1,384 +1,431 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>喜欢你</title>
-<link href="hovertreewelcome.css" type="text/css" rel="stylesheet" />
-</head>
-<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <TITLE>恋爱表白</TITLE>
+    <style>
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .container{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        position: absoulte;
+        z-index: -1;
+      }
 
-<div id="hovertreecontainer">
-
-<div>
-<h1 id="h1">胡颖颖</h1>
-<h2 id="h2"> 想问候，不知从何问起，就直接说喜欢你！</h2>
-<h2 id="h3"> 么么么么么么~~~~~~</h2>
-
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+      .table{
+        width: 600px;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+  </head>
+<body bgcolor=#000000>
+  <div class="table">
+      <br>
+      <br>
+      <font color=#00ff00 style="font-size:40px;font-family:黑体"><center>亲爱的，我爱你</font>
+      <br>
+      <br>
+      <FORM name=textform>
+          <CENTER>
+              <TEXTAREA style="FONT-SIZE: 12px; BORDER-LEFT-COLOR: #00ff00; BORDER-BOTTOM-COLOR: #00ff00; COLOR: #00ff00; BORDER-TOP-COLOR: #00ff00; SCROLLBAR-BASE-COLOR: #000000; BACKGROUND-COLOR: #000000; BORDER-RIGHT-COLOR: #00ff00" name=textfield rows=25 readOnly wrap=virtual cols=100>
+              </TEXTAREA> 
+          </CENTER> 
+          <SCRIPT language=javascript>
+              var pos=0;
+              function ShowText(strText)
+              {
+              document.textform.textfield.value = strText.substring(0,pos++);
+              setTimeout("ShowText(strText)",50);
+              if(pos==strText.length) 
+              {
+              return;
+              }
+              }
+              var strText = " “能够遇见你，对我来说是最大的幸福。”\n有了你，我的生活变的无限宽广\n→ ………………………………………………………………………………………………………………………………\n→ 　　　　　　　 ●　　　　　 宝　　　  　　　　　◢█◣◢█◣\n→ 　　　　　　　∠▏　　　　　　贝　　　　　　　　██████ \n→ 　　　●Υ　　 ┃　　　　　　　 我  　　　　　　◥████◤ \n→ 　　　┠┘　　╱╲　　　　　　　　 喜　　　　　　 ◥██◤\n→ 　　　┠╮　 ╰┬╯　　　　　　　　  欢　　　　　　 ◥◤\n→ 　　─╯│　　 ┙　　　　　　　　　　  你 ！\n→………………………………………………………………………………………………………………………………\n→我愿意用自己的心，好好的陪着你，爱着你。陪你到你想去的地方，用心走完我们人生的余下的旅程。\n→在未来的日子里，也许什么都无法确定，但唯一可以确定的是，我爱的人是你，\n→我会珍惜和你在一起的每一刻，每一分，每一秒。\n→我会珍惜和你在一起的每一刻，每一分，每一秒。\n→看见你笑，我很快乐，也感到幸福。所以，希望你的笑容只是属于我一个人的。\n→我喜欢你，真的很喜欢，就像向日葵如此依赖太阳一般的喜欢。\n→那么，你能答应，和我永远在一起吗？\n→\n→→→→→→→→→→→→→→→→→→→→→→ 永远爱你的：陌陌 →→→→→→→→→→→→→→→→→\n"
+              ShowText(strText);
+          </SCRIPT>
+      </FORM>
+      <p align="center" style="color:#00ff00;font-size:12px">宝 贝，我永远保护好你，不让你受欺负.</a></p>
+      <p align="center" style="color:#00ff00;font-size:12px">你一定要幸福<font size=2><font color="#00ff00"> “宝 贝”</font></p>
+      <p align="center" class="STYLE1" style="color: #9F5F9F;font-size:24px">宝 贝，这辈有你我真的很幸福</p>
+      <script type="text/javascript"> 
+          (function(){
+          var msg = "我爱你";
+          var size = 24;
+          var circleY = 0.75; var circleX = 2;
+          var letter_spacing = 5;
+          var diameter = 10;
+          var rotation = 0.4;
+          var speed = 0.3;
+          if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+          msg = msg.split('');
+          var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+          ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+          o = document.createElement('div'), oi = document.createElement('div'),
+          b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+          mouse = function(e){
+          e = e || window.event;
+          ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+          xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+          },
+          makecircle = function(){ // rotation/positioning
+          if(init.nopy){
+            o.style.top = (b || document.body).scrollTop + 'px';
+            o.style.left = (b || document.body).scrollLeft + 'px';
+          };
+          currStep -= rotation;
+          for (var d, i = n; i > -1; --i){ // makes the circle
+            d = document.getElementById('iemsg' + i).style;
+            d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+            d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+          };
+          },
+          drag = function(){ // makes the resistance
+          y[0] = Y[0] += (ymouse - Y[0]) * speed;
+          x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+          for (var i = n; i > 0; --i){
+            y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+            x[i] = X[i] += (x[i-1] - X[i]) * speed;
+          };
+          makecircle();
+          },
+          init = function(){ // appends message divs, & sets initial values for positioning arrays
+          if(!isNaN(window.pageYOffset)){
+            ymouse += window.pageYOffset;
+            xmouse += window.pageXOffset;
+          } else init.nopy = true;
+          for (var d, i = n; i > -1; --i){
+            d = document.createElement('div'); d.id = 'iemsg' + i;
+            d.style.height = d.style.width = a + 'px';
+            d.appendChild(document.createTextNode(msg[i]));
+            oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+          };
+          o.appendChild(oi); document.body.appendChild(o);
+          setInterval(drag, 25);
+          },
+          ascroll = function(){
+          ymouse += window.pageYOffset;
+          xmouse += window.pageXOffset;
+          window.removeEventListener('scroll', ascroll, false);
+          };
+          o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+          if (window.addEventListener){
+          window.addEventListener('load', init, false);
+          document.addEventListener('mouseover', mouse, false);
+          document.addEventListener('mousemove', mouse, false);
+            if (/Apple/.test(navigator.vendor))
+            window.addEventListener('scroll', ascroll, false);
+          }
+          else if (window.attachEvent){
+          window.attachEvent('onload', init);
+          document.attachEvent('onmousemove', mouse);
+          };
+          })();
+      </script>   
+      <style type="text/css"> 
+          #outerCircleText {
+          font-style: italic;
+          font-weight: bold;
+          font-family: 'comic sans ms', verdana, arial;
+          color: #00FF00;
+          position: absolute;top: 0;left: 0;z-index: 3000;cursor: default;}
+          #outerCircleText div {position: relative;}
+          #outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+      </style> 
+      <script type="text/javascript"> 
+          (function(){
+          var msg = "";
+          var size = 24;
+          var circleY = 0.75; var circleX = 2;
+          var letter_spacing = 5;
+          var diameter = 10;
+          var rotation = 0.4;
+          var speed = 0.3;
+          if (!window.addEventListener && !window.attachEvent || !document.createElement) return;
+          msg = msg.split('');
+          var n = msg.length - 1, a = Math.round(size * diameter * 0.208333), currStep = 20,
+          ymouse = a * circleY + 20, xmouse = a * circleX + 20, y = [], x = [], Y = [], X = [],
+          o = document.createElement('div'), oi = document.createElement('div'),
+          b = document.compatMode && document.compatMode != "BackCompat"? document.documentElement : document.body,
+          mouse = function(e){
+          e = e || window.event;
+          ymouse = !isNaN(e.pageY)? e.pageY : e.clientY; // y-position
+          xmouse = !isNaN(e.pageX)? e.pageX : e.clientX; // x-position
+          },
+          makecircle = function(){ // rotation/positioning
+          if(init.nopy){
+            o.style.top = (b || document.body).scrollTop + 'px';
+            o.style.left = (b || document.body).scrollLeft + 'px';
+          };
+          currStep -= rotation;
+          for (var d, i = n; i > -1; --i){ // makes the circle
+            d = document.getElementById('iemsg' + i).style;
+            d.top = Math.round(y[i] + a * Math.sin((currStep + i) / letter_spacing) * circleY - 15) + 'px';
+            d.left = Math.round(x[i] + a * Math.cos((currStep + i) / letter_spacing) * circleX) + 'px';
+          };
+          },
+          drag = function(){ // makes the resistance
+          y[0] = Y[0] += (ymouse - Y[0]) * speed;
+          x[0] = X[0] += (xmouse - 20 - X[0]) * speed;
+          for (var i = n; i > 0; --i){
+            y[i] = Y[i] += (y[i-1] - Y[i]) * speed;
+            x[i] = X[i] += (x[i-1] - X[i]) * speed;
+          };
+          makecircle();
+          },
+          init = function(){ // appends message divs, & sets initial values for positioning arrays
+          if(!isNaN(window.pageYOffset)){
+            ymouse += window.pageYOffset;
+            xmouse += window.pageXOffset;
+          } else init.nopy = true;
+          for (var d, i = n; i > -1; --i){
+            d = document.createElement('div'); d.id = 'iemsg' + i;
+            d.style.height = d.style.width = a + 'px';
+            d.appendChild(document.createTextNode(msg[i]));
+            oi.appendChild(d); y[i] = x[i] = Y[i] = X[i] = 0;
+          };
+          o.appendChild(oi); document.body.appendChild(o);
+          setInterval(drag, 25);
+          },
+          ascroll = function(){
+          ymouse += window.pageYOffset;
+          xmouse += window.pageXOffset;
+          window.removeEventListener('scroll', ascroll, false);
+          };
+          o.id = 'outerCircleText'; o.style.fontSize = size + 'px';
+          if (window.addEventListener){
+          window.addEventListener('load', init, false);
+          document.addEventListener('mouseover', mouse, false);
+          document.addEventListener('mousemove', mouse, false);
+            if (/Apple/.test(navigator.vendor))
+            window.addEventListener('scroll', ascroll, false);
+          }
+          else if (window.attachEvent){
+          window.attachEvent('onload', init);
+          document.attachEvent('onmousemove', mouse);
+          };
+          })();
+      </script>
+  </div>
+<div id="jsi-cherry-container" class="container">
 </div>
-
-</div>
-
-<canvas id="canvas"></canvas>
-<audio autoplay="autoplay">
-<source src="hovertreexihuanni.mp3" type="audio/ogg">
-<source src="hovertreexihuanni.mp3" type="audio/mpeg">
-<br />
-</audio><script type="text/javascript" src="hovertreewelcome.js">
-</script>
-<script type="text/javascript">
-
-; (function (window) {
-
-var ctx,
-hue,
-logo,
-form,
-buffer,
-target = {},
-tendrils = [],
-settings = {};
-
-settings.debug = true;
-settings.friction = 0.5;
-settings.trails = 20;
-settings.size = 50;
-settings.dampening = 0.25;
-settings.tension = 0.98;
-
-Math.TWO_PI = Math.PI * 2;
-
-function Oscillator(options) {
-this.init(options || {});
-}
-
-Oscillator.prototype = (function () {
-
-var value = 0;
-
-return {
-
-init: function (options) {
-this.phase = options.phase || 0;
-this.offset = options.offset || 0;
-this.frequency = options.frequency || 0.001;
-this.amplitude = options.amplitude || 1;
-},
-
-update: function () {
-this.phase += this.frequency;
-value = this.offset + Math.sin(this.phase) * this.amplitude;
-return value;
-},
-
-value: function () {
-return value;
-}
-};
-
-})();
-
-function Tendril(options) {
-this.init(options || {});
-}
-
-Tendril.prototype = (function () {
-
-function Node() {
-this.x = 0;
-this.y = 0;
-this.vy = 0;
-this.vx = 0;
-}
-
-return {
-
-init: function (options) {
-
-this.spring = options.spring + (Math.random() * 0.1) - 0.05;
-this.friction = settings.friction + (Math.random() * 0.01) - 0.005;
-this.nodes = [];
-
-for (var i = 0, node; i < settings.size; i++) {
-
-node = new Node();
-node.x = target.x;
-node.y = target.y;
-
-this.nodes.push(node);
-}
-},
-
-update: function () {
-
-var spring = this.spring,
-node = this.nodes[0];
-
-node.vx += (target.x - node.x) * spring;
-node.vy += (target.y - node.y) * spring;
-
-for (var prev, i = 0, n = this.nodes.length; i < n; i++) {
-
-node = this.nodes[i];
-
-if (i > 0) {
-
-prev = this.nodes[i - 1];
-
-node.vx += (prev.x - node.x) * spring;
-node.vy += (prev.y - node.y) * spring;
-node.vx += prev.vx * settings.dampening;
-node.vy += prev.vy * settings.dampening;
-}
-
-node.vx *= this.friction;
-node.vy *= this.friction;
-node.x += node.vx;
-node.y += node.vy;
-
-spring *= settings.tension;
-}
-},
-
-draw: function () {
-
-var x = this.nodes[0].x,
-y = this.nodes[0].y,
-a, b;
-
-ctx.beginPath();
-ctx.moveTo(x, y);
-
-for (var i = 1, n = this.nodes.length - 2; i < n; i++) {
-
-a = this.nodes[i];
-b = this.nodes[i + 1];
-x = (a.x + b.x) * 0.5;
-y = (a.y + b.y) * 0.5;
-
-ctx.quadraticCurveTo(a.x, a.y, x, y);
-}
-
-a = this.nodes[i];
-b = this.nodes[i + 1];
-
-ctx.quadraticCurveTo(a.x, a.y, b.x, b.y);
-ctx.stroke();
-ctx.closePath();
-}
-};
-
-})();
-
-
-function init(event) {
-
-document.removeEventListener('mousemove', init);
-document.removeEventListener('touchstart', init);
-
-document.addEventListener('mousemove', mousemove);
-document.addEventListener('touchmove', mousemove);
-document.addEventListener('touchstart', touchstart);
-
-mousemove(event);
-reset();
-loop();
-}
-
-function reset() {
-
-tendrils = [];
-
-for (var i = 0; i < settings.trails; i++) {
-
-tendrils.push(new Tendril({
-spring: 0.45 + 0.025 * (i / settings.trails)
-}));
-}
-}
-
-function loop() {
-
-if (!ctx.running) return;
-
-ctx.globalCompositeOperation = 'source-over';
-ctx.fillStyle = 'rgba(8,5,16,0.4)';
-ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-ctx.globalCompositeOperation = 'lighter';
-ctx.strokeStyle = 'hsla(' + Math.round(hue.update()) + ',90%,50%,0.25)';
-ctx.lineWidth = 1;
-
-if (ctx.frame % 60 == 0) {
-console.log(hue.update(), Math.round(hue.update()), hue.phase, hue.offset, hue.frequency, hue.amplitude);
-}
-
-for (var i = 0, tendril; i < settings.trails; i++) {
-tendril = tendrils[i];
-tendril.update();
-tendril.draw();
-}
-
-ctx.frame++;
-ctx.stats.update();
-requestAnimFrame(loop);
-}
-
-function resize() {
-ctx.canvas.width = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
-}
-
-function start() {
-if (!ctx.running) {
-ctx.running = true;
-loop();
-}
-}
-
-function stop() {
-ctx.running = false;
-}
-
-function mousemove(event) {
-if (event.touches) {
-target.x = event.touches[0].pageX;
-target.y = event.touches[0].pageY;
-} else {
-target.x = event.clientX
-target.y = event.clientY;
-}
-event.preventDefault();
-}
-
-function touchstart(event) {
-if (event.touches.length == 1) {
-target.x = event.touches[0].pageX;
-target.y = event.touches[0].pageY;
-}
-}
-
-function keyup(event) {
-
-switch (event.keyCode) {
-case 32:
-save();
-break;
-default:
-
-}
-}
-
-function letters(id) {
-
-var el = document.getElementById(id),
-letters = el.innerHTML.replace('&amp;', '&').split(''),
-heading = '';
-
-for (var i = 0, n = letters.length, letter; i < n; i++) {
-letter = letters[i].replace('&', '&amp');
-heading += letter.trim() ? '<span class="letter-' + i + '">' + letter + '</span>' : '&nbsp;';
-}
-
-el.innerHTML = heading;
-setTimeout(function () {
-el.className = 'transition-in';
-}, (Math.random() * 500) + 500);
-}
-
-function save() {
-
-if (!buffer) {
-
-buffer = document.createElement('canvas');
-buffer.width = screen.availWidth;
-buffer.height = screen.availHeight;
-buffer.ctx = buffer.getContext('2d');
-
-form = document.createElement('form');
-form.method = 'post';
-form.input = document.createElement('input');
-form.input.type = 'hidden';
-form.input.name = 'data';
-form.appendChild(form.input);
-
-document.body.appendChild(form);
-}
-
-buffer.ctx.fillStyle = 'rgba(8,5,16)';
-buffer.ctx.fillRect(0, 0, buffer.width, buffer.height);
-
-buffer.ctx.drawImage(canvas,
-Math.round(buffer.width / 2 - canvas.width / 2),
-Math.round(buffer.height / 2 - canvas.height / 2)
-);
-
-buffer.ctx.drawImage(logo,
-Math.round(buffer.width / 2 - logo.width / 4),
-Math.round(buffer.height / 2 - logo.height / 4),
-logo.width / 2,
-logo.height / 2
-);
-
-window.open(buffer.toDataURL(), 'wallpaper', 'top=0,left=0,width=' + buffer.width + ',height=' + buffer.height);
-
-}
-
-window.requestAnimFrame = (function () {
-return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (fn) { window.setTimeout(fn, 1000 / 60) };
-})();
-
-window.onload = function () {
-
-ctx = document.getElementById('canvas').getContext('2d');
-ctx.stats = new Stats();
-ctx.running = true;
-ctx.frame = 1;
-
-logo = new Image();
-logo.src = 'ht' + 'tp://ho' + 'vertree.c' + 'om/themes/hvtimages/hvtlogo.p' + 'ng';
-
-hue = new Oscillator({
-phase: Math.random() * Math.TWO_PI,
-amplitude: 85,
-frequency: 0.0015,
-offset: 285
-});
-
-letters('h1');
-letters('h2');
-letters('h3');
-
-document.addEventListener('mousemove', init);
-document.addEventListener('touchstart', init);
-document.body.addEventListener('orientationchange', resize);
-window.addEventListener('resize', resize);
-window.addEventListener('keyup', keyup);
-window.addEventListener('focus', start);
-window.addEventListener('blur', stop);
-
-resize();
-
-if (window.DEBUG) {
-
-var gui = new dat.GUI();
-
-settings.gui.add(settings, 'trails', 1, 30).onChange(reset);
-settings.gui.add(settings, 'size', 25, 75).onFinishChange(reset);
-settings.gui.add(settings, 'friction', 0.45, 0.55).onFinishChange(reset);
-settings.gui.add(settings, 'dampening', 0.01, 0.4).onFinishChange(reset);
-settings.gui.add(settings, 'tension', 0.95, 0.999).onFinishChange(reset);
-
-document.body.appendChild(ctx.stats.domElement);
-}
-};
-
-})(window);
-
+<script>
+	var RENDERER = {
+	  INIT_CHERRY_BLOSSOM_COUNT : 30,
+	  MAX_ADDING_INTERVAL : 10,
+	  
+	  init : function(){
+		  this.setParameters();
+		  this.reconstructMethods();
+		  this.createCherries();
+		  this.render();
+	  },
+	  setParameters : function(){
+		  this.$container = $('#jsi-cherry-container');
+		  this.width = this.$container.width();
+		  this.height = this.$container.height();
+		  this.context = $('<canvas />').attr({width : this.width, height : this.height}).appendTo(this.$container).get(0).getContext('2d');
+		  this.cherries = [];
+		  this.maxAddingInterval = Math.round(this.MAX_ADDING_INTERVAL * 1000 / this.width);
+		  this.addingInterval = this.maxAddingInterval;
+	  },
+	  reconstructMethods : function(){
+		  this.render = this.render.bind(this);
+	  },
+	  createCherries : function(){
+		  for(var i = 0, length = Math.round(this.INIT_CHERRY_BLOSSOM_COUNT * this.width / 1000); i < length; i++){
+			  this.cherries.push(new CHERRY_BLOSSOM(this, true));
+		  }
+	  },
+	  render : function(){
+		  requestAnimationFrame(this.render);
+		  this.context.clearRect(0, 0, this.width, this.height);
+		  
+		  this.cherries.sort(function(cherry1, cherry2){
+			  return cherry1.z - cherry2.z;
+		  });
+		  for(var i = this.cherries.length - 1; i >= 0; i--){
+			  if(!this.cherries[i].render(this.context)){
+				  this.cherries.splice(i, 1);
+			  }
+		  }
+		  if(--this.addingInterval == 0){
+			  this.addingInterval = this.maxAddingInterval;
+			  this.cherries.push(new CHERRY_BLOSSOM(this, false));
+		  }
+	  }
+  };
+  var CHERRY_BLOSSOM = function(renderer, isRandom){
+	  this.renderer = renderer;
+	  this.init(isRandom);
+  };
+  CHERRY_BLOSSOM.prototype = {
+	  FOCUS_POSITION : 300,
+	  FAR_LIMIT : 600,
+	  MAX_RIPPLE_COUNT : 100,
+	  RIPPLE_RADIUS : 100,
+	  SURFACE_RATE : 0.5,
+	  SINK_OFFSET : 20,
+	  
+	  init : function(isRandom){
+		  this.x = this.getRandomValue(-this.renderer.width, this.renderer.width);
+		  this.y = isRandom ? this.getRandomValue(0, this.renderer.height) : this.renderer.height * 1.5;
+		  this.z = this.getRandomValue(0, this.FAR_LIMIT);
+		  this.vx = this.getRandomValue(-2, 2);
+		  this.vy = -2;
+		  this.theta = this.getRandomValue(0, Math.PI * 2);
+		  this.phi = this.getRandomValue(0, Math.PI * 2);
+		  this.psi = 0;
+		  this.dpsi = this.getRandomValue(Math.PI / 600, Math.PI / 300);
+		  this.opacity = 0;
+		  this.endTheta = false;
+		  this.endPhi = false;
+		  this.rippleCount = 0;
+		  
+		  var axis = this.getAxis(),
+			  theta = this.theta + Math.ceil(-(this.y + this.renderer.height * this.SURFACE_RATE) / this.vy) * Math.PI / 500;
+		  theta %= Math.PI * 2;
+		  
+		  this.offsetY = 40 * ((theta <= Math.PI / 2 || theta >= Math.PI * 3 / 2) ? -1 : 1);
+		  this.thresholdY = this.renderer.height / 2 + this.renderer.height * this.SURFACE_RATE * axis.rate;
+		  this.entityColor = this.renderer.context.createRadialGradient(0, 40, 0, 0, 40, 80);
+		  this.entityColor.addColorStop(0, 'hsl(330, 70%, ' + 50 * (0.3 + axis.rate) + '%)');
+		  this.entityColor.addColorStop(0.05, 'hsl(330, 40%,' + 55 * (0.3 + axis.rate) + '%)');
+		  this.entityColor.addColorStop(1, 'hsl(330, 20%, ' + 70 * (0.3 + axis.rate) + '%)');
+		  this.shadowColor = this.renderer.context.createRadialGradient(0, 40, 0, 0, 40, 80);
+		  this.shadowColor.addColorStop(0, 'hsl(330, 40%, ' + 30 * (0.3 + axis.rate) + '%)');
+		  this.shadowColor.addColorStop(0.05, 'hsl(330, 40%,' + 30 * (0.3 + axis.rate) + '%)');
+		  this.shadowColor.addColorStop(1, 'hsl(330, 20%, ' + 40 * (0.3 + axis.rate) + '%)');
+	  },
+	  getRandomValue : function(min, max){
+		  return min + (max - min) * Math.random();
+	  },
+	  getAxis : function(){
+		  var rate = this.FOCUS_POSITION / (this.z + this.FOCUS_POSITION),
+			  x = this.renderer.width / 2 + this.x * rate,
+			  y = this.renderer.height / 2 - this.y * rate;
+		  return {rate : rate, x : x, y : y};
+	  },
+	  renderCherry : function(context, axis){
+		  context.beginPath();
+		  context.moveTo(0, 40);
+		  context.bezierCurveTo(-60, 20, -10, -60, 0, -20);
+		  context.bezierCurveTo(10, -60, 60, 20, 0, 40);
+		  context.fill();
+		  
+		  for(var i = -4; i < 4; i++){
+			  context.beginPath();
+			  context.moveTo(0, 40);
+			  context.quadraticCurveTo(i * 12, 10, i * 4, -24 + Math.abs(i) * 2);
+			  context.stroke();
+		  }
+	  },
+	  render : function(context){
+		  var axis = this.getAxis();
+		  
+		  if(axis.y == this.thresholdY && this.rippleCount < this.MAX_RIPPLE_COUNT){
+			  context.save();
+			  context.lineWidth = 2;
+			  context.strokeStyle = 'hsla(0, 0%, 100%, ' + (this.MAX_RIPPLE_COUNT - this.rippleCount) / this.MAX_RIPPLE_COUNT + ')';
+			  context.translate(axis.x + this.offsetY * axis.rate * (this.theta <= Math.PI ? -1 : 1), axis.y);
+			  context.scale(1, 0.3);
+			  context.beginPath();
+			  context.arc(0, 0, this.rippleCount / this.MAX_RIPPLE_COUNT * this.RIPPLE_RADIUS * axis.rate, 0, Math.PI * 2, false);
+			  context.stroke();
+			  context.restore();
+			  this.rippleCount++;
+		  }
+		  if(axis.y < this.thresholdY || (!this.endTheta || !this.endPhi)){
+			  if(this.y <= 0){
+				  this.opacity = Math.min(this.opacity + 0.01, 1);
+			  }
+			  context.save();
+			  context.globalAlpha = this.opacity;
+			  context.fillStyle = this.shadowColor;
+			  context.strokeStyle = 'hsl(330, 30%,' + 40 * (0.3 + axis.rate) + '%)';
+			  context.translate(axis.x, Math.max(axis.y, this.thresholdY + this.thresholdY - axis.y));
+			  context.rotate(Math.PI - this.theta);
+			  context.scale(axis.rate * -Math.sin(this.phi), axis.rate);
+			  context.translate(0, this.offsetY);
+			  this.renderCherry(context, axis);
+			  context.restore();
+		  }
+		  context.save();
+		  context.fillStyle = this.entityColor;
+		  context.strokeStyle = 'hsl(330, 40%,' + 70 * (0.3 + axis.rate) + '%)';
+		  context.translate(axis.x, axis.y + Math.abs(this.SINK_OFFSET * Math.sin(this.psi) * axis.rate));
+		  context.rotate(this.theta);
+		  context.scale(axis.rate * Math.sin(this.phi), axis.rate);
+		  context.translate(0, this.offsetY);
+		  this.renderCherry(context, axis);
+		  context.restore();
+		  
+		  if(this.y <= -this.renderer.height / 4){
+			  if(!this.endTheta){
+				  for(var theta = Math.PI / 2, end = Math.PI * 3 / 2; theta <= end; theta += Math.PI){
+					  if(this.theta < theta && this.theta + Math.PI / 200 > theta){
+						  this.theta = theta;
+						  this.endTheta = true;
+						  break;
+					  }
+				  }
+			  }
+			  if(!this.endPhi){
+				  for(var phi = Math.PI / 8, end = Math.PI * 7 / 8; phi <= end; phi += Math.PI * 3 / 4){
+					  if(this.phi < phi && this.phi + Math.PI / 200 > phi){
+						  this.phi = Math.PI / 8;
+						  this.endPhi = true;
+						  break;
+					  }
+				  }
+			  }
+		  }
+		  if(!this.endTheta){
+			  if(axis.y == this.thresholdY){
+				  this.theta += Math.PI / 200 * ((this.theta < Math.PI / 2 || (this.theta >= Math.PI && this.theta < Math.PI * 3 / 2)) ? 1 : -1);
+			  }else{
+				  this.theta += Math.PI / 500;
+			  }
+			  this.theta %= Math.PI * 2;
+		  }
+		  if(this.endPhi){
+			  if(this.rippleCount == this.MAX_RIPPLE_COUNT){
+				  this.psi += this.dpsi;
+				  this.psi %= Math.PI * 2;
+			  }
+		  }else{
+			  this.phi += Math.PI / ((axis.y == this.thresholdY) ? 200 : 500);
+			  this.phi %= Math.PI;
+		  }
+		  if(this.y <= -this.renderer.height * this.SURFACE_RATE){
+			  this.x += 2;
+			  this.y = -this.renderer.height * this.SURFACE_RATE;
+		  }else{
+			  this.x += this.vx;
+			  this.y += this.vy;
+		  }
+		  return this.z > -this.FOCUS_POSITION && this.z < this.FAR_LIMIT && this.x < this.renderer.width * 1.5;
+	  }
+  };
+  $(function(){
+	  RENDERER.init();
+  });
 </script>
 </body>
 </html>
