@@ -6,7 +6,7 @@ window.onload=function(){
 	buhao.onclick=function(){
 		$("#w1").text("我观察你很久了");
 		$("#w2").text("小姐姐做我对象好不好?");
-		$("#pic").attr("src", "images/1.jpg");
+		$("#pic").attr("src", "https://cdn.jsdelivr.net/gh/loveroath/loveroath.github.io/66/images/1.jpg");
 		$("#jsi-cherry-container").hide();
 		Dianji++;
 		if(Dianji==1){
@@ -34,7 +34,7 @@ window.onload=function(){
 		alert("小姐姐终于同意了，我爱你");
 		$("#w1").text("那从现在开始");
 		$("#w2").text("你就是我一个人的小姐姐了~");
-		$("#pic").attr("src", "images/2.jpg");
+		$("#pic").attr("src", "https://cdn.jsdelivr.net/gh/loveroath/loveroath.github.io/66/images/2.jpg");
 		$("#jsi-cherry-container").show();
 	}
 	
